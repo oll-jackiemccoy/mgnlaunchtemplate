@@ -17,11 +17,14 @@ In order to update the Launch template that MGN assigns to the EC2 we will need 
 #### Import the launch template into Terraform
 - Add the following to your Terraform main.tf
 ```
+resource "aws_launch_template" "launch_template" {
+}
 resource "aws_launch_template" "launch_template_2" {
 }
 ```
 - Import the Template
 ```
+terraform import aws_launch_template.launch_template lt-0cbce13a7370e75e7
 terraform import aws_launch_template.launch_template_2 lt-0cbce13a7370e75e7
 ```
 - Use the imported *terraform.tfstate* to build the template
