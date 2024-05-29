@@ -24,7 +24,7 @@ resource "aws_launch_template" "launch_template_2" {
 ```
 - Import the Template
 ```
-terraform import aws_launch_template.launch_template lt-0cbce13a7370e75e7
+terraform import aws_launch_template.launch_template lt-0b5be66a8e786297b
 terraform import aws_launch_template.launch_template_2 lt-0cbce13a7370e75e7
 ```
 - Use the imported *terraform.tfstate* to build the template
