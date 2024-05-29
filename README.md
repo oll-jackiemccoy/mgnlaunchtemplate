@@ -15,6 +15,8 @@ In order to update the Launch template that MGN assigns to the EC2 we will need 
 - Under EC2 Launch Template, Copy the Template ID
     - lt-0cbce13a7370e75e7
 #### Import the launch template into Terraform
+- Add the following to your Terraform main.tf
 ```
-- resource "aws_launch_template" "launch_template_2"
+resource "aws_launch_template" "launch_template_2" {
+}
 ```
