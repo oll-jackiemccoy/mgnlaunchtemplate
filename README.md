@@ -25,3 +25,12 @@ resource "aws_launch_template" "launch_template_2" {
 terraform import aws_launch_template.launch_template_2 lt-0cbce13a7370e75e7
 ```
 - Use the imported *terraform.tfstate* to build the template
+#### Build Terraform and the Templates
+The thought process behind the design is to have a .tfvar file per EC2 configuration with the customizations required for migration. 
+- main.tf
+- ec2name.tfvars
+- ec2name-test.tfvars
+- variable.tf
+#### Running Terraform
+- terraform plan -var-file="ec2name-test.tfvars"
+- terraform apply -var-file="ec2name-test.tfvars"
