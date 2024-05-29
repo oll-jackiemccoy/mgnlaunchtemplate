@@ -20,3 +20,7 @@ In order to update the Launch template that MGN assigns to the EC2 we will need 
 resource "aws_launch_template" "launch_template_2" {
 }
 ```
+- Import the Template
+```
+terraform import aws_launch_template.launch_template_2 lt-0cbce13a7370e75e7
+```
